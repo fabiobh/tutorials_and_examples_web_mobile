@@ -1,0 +1,6 @@
+framework module Pods_RxSwiftMvvmTutorial {
+  umbrella header "Pods-RxSwiftMvvmTutorial-umbrella.h"
+
+  export *
+  module * { export * }
+}

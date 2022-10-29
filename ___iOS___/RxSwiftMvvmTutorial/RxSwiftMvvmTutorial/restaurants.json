@@ -1,0 +1,22 @@
+[
+    {
+        "name": "Blue Legume",
+        "cuisine": "european"
+    },
+    {
+        "name": "Orange Fresh",
+        "cuisine": "english"
+    },
+    {
+        "name": "El taco",
+        "cuisine": "mexican"
+    },
+    {
+        "name": "Le dofs",
+        "cuisine": "french"
+    },
+    {
+        "name": "Pi",
+        "cuisine": "indian"
+    }
+]

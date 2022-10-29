@@ -1,0 +1,10 @@
+query SpecificCountry {
+    country(code: "US") {
+        name
+        capital
+        currency
+        states {
+            name
+        }
+    }
+}

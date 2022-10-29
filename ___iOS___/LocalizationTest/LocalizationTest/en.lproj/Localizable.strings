@@ -1,0 +1,9 @@
+/* 
+  Localizable.strings
+  LocalizationTest
+
+  Created by fabiocunha on 24/09/22.
+  
+*/
+
+"text1" = "hello";

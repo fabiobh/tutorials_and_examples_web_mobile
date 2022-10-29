@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Another Danger - Demo.otf">
+            <string>AnotherDangerDemo</string>
+        </array>
+        <array key="jd_neos.ttf">
+            <string>JD-Neos</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="FontTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="meu text" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RIk-o2-kdG">
+                                <rect key="frame" x="133.5" y="624" width="147.5" height="48"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="meu text" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gGb-jw-YHz">
+                                <rect key="frame" x="119.5" y="418" width="175.5" height="60"/>
+                                <fontDescription key="fontDescription" name="JD-Neos" family="JD Neos" pointSize="66"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="meu texto" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="36D-Qj-JJX">
+                                <rect key="frame" x="128.5" y="213.5" width="157" height="69"/>
+                                <fontDescription key="fontDescription" name="AnotherDangerDemo" family="Another Danger - Demo" pointSize="40"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemPinkColor"/>
+                        <constraints>
+                            <constraint firstItem="gGb-jw-YHz" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="6lk-Aw-KEl"/>
+                            <constraint firstItem="RIk-o2-kdG" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Inw-Gq-iWk"/>
+                            <constraint firstItem="36D-Qj-JJX" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="eGi-fs-obf"/>
+                            <constraint firstItem="gGb-jw-YHz" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="rdU-bD-kkQ"/>
+                            <constraint firstItem="RIk-o2-kdG" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="200" id="tT5-wR-eFO"/>
+                            <constraint firstItem="36D-Qj-JJX" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-200" id="uUs-mh-X8v"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="10" y="42"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemPinkColor">
+            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
