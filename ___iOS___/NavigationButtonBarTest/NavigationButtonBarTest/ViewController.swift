@@ -12,8 +12,8 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        navigationController?.title = "test"
-        navigationController?.navigationBar.tintColor = .red
+        
+        navigationController?.navigationBar.tintColor = .green
         print("navigationController?.isNavigationBarHidden: \(navigationController?.isNavigationBarHidden)")
         title = "Navitate Button Test"
         navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addTapped))

@@ -24,10 +24,10 @@
             </objects>
             <point key="canvasLocation" x="918.84057971014499" y="41.517857142857139"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--aaa-->
         <scene sceneID="MYo-O2-wdl">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="g5X-Xq-GEc" sceneMemberID="viewController">
+                <navigationController title="aaa" automaticallyAdjustsScrollViewInsets="NO" id="g5X-Xq-GEc" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="sDw-2i-kYT">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
