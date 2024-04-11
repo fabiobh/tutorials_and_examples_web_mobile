@@ -1,2 +1,0 @@
-Small tutorial app
-- MVVM

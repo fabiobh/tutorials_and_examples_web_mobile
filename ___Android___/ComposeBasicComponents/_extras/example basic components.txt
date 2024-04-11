@@ -1,0 +1,48 @@
+Column (
+        modifier = Modifier.background(Color.Red)
+    ){
+        if (name.length > 5) {
+            Text( text = "Hello $name!" )
+        }
+        for (i in 1..2) {
+            Icon(imageVector = Icons.Default.Add,
+                contentDescription = null)
+        }
+        Image(painter = painterResource(id = R.drawable.ic_call_answer),
+            contentDescription = null)
+        Text(
+            text = "Hellodd $name!"
+        )
+
+    }
+
+Column
+Text
+Image
+
+modifier = Modifier.fillMaxSize(),
+                    color = MaterialTheme.colorScheme.background
+
+modifier = Modifier.fillMaxSize().background(Color.Red),
+
+
+Column (
+                    modifier = Modifier.background(Color.Red)
+                ){
+                    //if (name.length > 5) {
+                    //    Text( text = "Hello $name!" )
+                    //}
+                    for (i in 1..2) {
+                        Icon(imageVector = Icons.Default.Add,
+                            contentDescription = null)
+                    }
+                    Image(painter = painterResource(id = androidx.core.R.drawable.ic_call_answer),
+                        contentDescription = null)
+                    Text(
+                        text = "Hellodd $name!"
+                    )
+
+                }
+                
+
+MyExample("Android 1")

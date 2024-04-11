@@ -1,0 +1,24 @@
+var textFieldState by remember {
+	mutableStateOf("")
+}
+
+Scaffold(
+	modifier = Modifier.fillMaxSize(),
+	scaffoldState = scaffoldState
+) {
+	Collum(
+		horizontalAlignment = Alignment.CenterHorizontally,
+		verticalArrangement = Arrangement.Center,
+		modifier = Modifier
+			.fillMaxSize()
+			.paading(horizontal = 30.dp)
+	) {
+		TextField(
+			value = textFieldState,
+			label = {
+				Text("Enter your name")			
+			},
+
+		)
+	}
+}
