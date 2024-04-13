@@ -12,49 +12,70 @@ class ViewController: UIViewController {
 
     private var cancellable: AnyCancellable?
     
-    private var publisher: AnyPublisher<Any, Error>?
+    private var cancellableV2: AnyCancellable?
+    
+    //private var publisher: AnyPublisher<Any, Error>?
     
     private var cancels: Set<AnyCancellable> = []
     
     private var posts: [Post] = [] {
         didSet {
-            print("posts --> \(self.posts.count)")
+            print("posts V1 --> \(self.posts.count)")
+            for postV1 in self.posts {
+                print("postV1 title: \(postV1.title)")
+            }
         }
     }
+    
+    private var postsV2: [Post] = [] {
+        didSet {
+            print("posts V2 --> \(self.postsV2.count)")
+            for postV2 in self.postsV2 {
+                print("postV2 id: \(postV2.id)")
+            }
+            print()
+        }
+    }
+            
     override func viewDidLoad() {
         super.viewDidLoad()
+                
+        // function 1
+        fetchDataWithDecoder()
+
+        // function 2
+        fetchDataWithDecoderAndDidSet()
         
-        view.backgroundColor = .green
-        
-//        fetchDataWithDecoder()
-//
-//        fetchDataWithDecoderAndDidSet()
-        
+        // function 3
         fetchDataInStringFormat()
     }
     
+    // 1
     func fetchDataWithDecoder() {
+        // url used to get information
         let url = URL(string: "https://jsonplaceholder.typicode.com/posts")!
         
+        // dataTask function used to read url
         self.cancellable = URLSession.shared.dataTaskPublisher(for: url)
-        .map { $0.data }
-        .decode(type: [Post].self, decoder: JSONDecoder())
-        .replaceError(with: [])
-        .eraseToAnyPublisher()
-        .sink(receiveValue: { posts in
+        .map { $0.data } // parse data
+        .decode(type: [Post].self, decoder: JSONDecoder()) // decode data to Post array class
+        .replaceError(with: []) // ro map error, not used
+        //.eraseToAnyPublisher() // not neccessary now
+        .sink(receiveValue: { posts in // the result can be used here
             print("x: \(posts.count)")
+            self.posts = posts
         })
     }
         
     func fetchDataWithDecoderAndDidSet() {
         let url = URL(string: "https://jsonplaceholder.typicode.com/posts")!
         
-        self.cancellable = URLSession.shared.dataTaskPublisher(for: url)
+        self.cancellableV2 = URLSession.shared.dataTaskPublisher(for: url)
         .map { $0.data }
         .decode(type: [Post].self, decoder: JSONDecoder())
         .replaceError(with: [])
         .eraseToAnyPublisher()
-        .assign(to: \.posts, on: self)
+        .assign(to: \.postsV2, on: self)
     }
     
     func fetchDataInStringFormat() {
