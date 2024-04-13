@@ -66,7 +66,9 @@ class ViewController: UIViewController {
             self.posts = posts
         })
     }
-        
+    
+    // 2
+    // equal the function below, except for assignment
     func fetchDataWithDecoderAndDidSet() {
         let url = URL(string: "https://jsonplaceholder.typicode.com/posts")!
         
@@ -75,9 +77,11 @@ class ViewController: UIViewController {
         .decode(type: [Post].self, decoder: JSONDecoder())
         .replaceError(with: [])
         .eraseToAnyPublisher()
-        .assign(to: \.postsV2, on: self)
+        .assign(to: \.postsV2, on: self) // the same code as - self.postsV2 = postsV2, see example above
     }
     
+    // 3
+    // the difference in this code is that does not decode the result, it jus show the html bodry as a result
     func fetchDataInStringFormat() {
         let url = URL(string: "https://example.com/")!
         URLSession.shared.dataTaskPublisher(for: url)
