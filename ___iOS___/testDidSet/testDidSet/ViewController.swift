@@ -18,9 +18,8 @@ class ViewController: UIViewController {
     private let myTextView: UITextView = {
         let textView = UITextView()
         textView.text = "111"
-        textView.frame = CGRect(x: 20,y: 20,width: 100,height: 100)
+        textView.frame = CGRect(x: 20,y: 20,width: 200,height: 100)
         textView.contentInsetAdjustmentBehavior = .automatic
-        //textView.center = self().view.center
         textView.textAlignment = NSTextAlignment.justified
         textView.textColor = UIColor.blue
         textView.backgroundColor = UIColor.lightGray
@@ -33,21 +32,7 @@ class ViewController: UIViewController {
         view.addSubview(myTextView)
         
         textToModify = "333"
-        myTextView.text = "222"
     }
 
 
 }
-
-class mmms: UITableViewCell {
-    
-    
-    var textToModify: String = "" {
-        didSet {
-            textLabel?.text = ""
-            detailTextLabel?.text = "1"
-        }
-    }
-    
-}
-
