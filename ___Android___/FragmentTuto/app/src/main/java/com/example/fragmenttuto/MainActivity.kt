@@ -16,10 +16,11 @@ class MainActivity : AppCompatActivity() {
             insets
         }
         */
-        addMyFragment()
+        addMyFragment1()
+        addMyFragment2()
     }
 
-    fun addMyFragment() {
+    fun addMyFragment1() {
         /*
         addFragement
         replaceFragment
@@ -30,6 +31,16 @@ class MainActivity : AppCompatActivity() {
         val fragmentTransaction = supportFragmentManager.beginTransaction()
         fragmentTransaction.add(R.id.fragmentContainer, fragment)
         fragmentTransaction.addToBackStack("FragmentOne")
+        fragmentTransaction.commit()
+    }
+
+    fun addMyFragment2() {
+
+        val fragment = FragmentTwoX()
+        val supportFragmentManager = supportFragmentManager
+        val fragmentTransaction = supportFragmentManager.beginTransaction()
+        fragmentTransaction.add(R.id.fragmentContainer, fragment)
+        fragmentTransaction.addToBackStack("FragmentTwo")
         fragmentTransaction.commit()
     }
 
