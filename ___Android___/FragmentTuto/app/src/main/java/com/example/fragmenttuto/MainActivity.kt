@@ -1,6 +1,7 @@
 package com.example.fragmenttuto
 
 import android.os.Bundle
+import android.util.Log
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 
@@ -16,6 +17,7 @@ class MainActivity : AppCompatActivity() {
             insets
         }
         */
+        Log.i("","app start")
         addMyFragment1()
         addMyFragment2()
     }
@@ -26,7 +28,7 @@ class MainActivity : AppCompatActivity() {
         replaceFragment
         removeFragment
         */
-        val fragment = FragmentOneX()
+        val fragment = FragmentOneX.newInstance("n","s")
         val supportFragmentManager = supportFragmentManager
         val fragmentTransaction = supportFragmentManager.beginTransaction()
         fragmentTransaction.add(R.id.fragmentContainer, fragment)
