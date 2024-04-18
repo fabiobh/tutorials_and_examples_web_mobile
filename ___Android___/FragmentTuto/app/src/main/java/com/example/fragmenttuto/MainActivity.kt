@@ -17,8 +17,8 @@ class MainActivity : AppCompatActivity() {
             insets
         }
         */
-        Log.i("","app start")
-        addMyFragment1()
+        Log.i("INFO","app start")
+        //addMyFragment3()
         addMyFragment2()
     }
 
@@ -44,6 +44,18 @@ class MainActivity : AppCompatActivity() {
         fragmentTransaction.add(R.id.fragmentContainer, fragment)
         fragmentTransaction.addToBackStack("FragmentTwo")
         fragmentTransaction.commit()
+    }
+
+    fun addMyFragment3() {
+/*
+        val fragment = FragmentThreeX()
+        val supportFragmentManager = supportFragmentManager
+        val fragmentTransaction = supportFragmentManager.beginTransaction()
+        fragmentTransaction.add(R.id.fragmentContainer, fragment)
+        fragmentTransaction.addToBackStack("FragmentThree")
+        fragmentTransaction.commit()
+
+ */
     }
 
 }
