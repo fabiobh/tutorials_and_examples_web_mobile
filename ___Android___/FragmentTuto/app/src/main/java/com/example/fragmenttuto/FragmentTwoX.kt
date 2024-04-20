@@ -37,8 +37,10 @@ class FragmentTwoX : Fragment() {
         val myButton2 = rootView?.findViewById<Button>(R.id.myButton2)
         myButton2?.setOnClickListener(object : View.OnClickListener {
             override fun onClick(v: View?) {
+                MainActivity.messageFromActivity()
                 Log.v("","clicked")
-                addFragment1()
+                //addFragment1() // Call another fragment from this Fragment
+                MainActivity.addFragment1FromActivity() // call fragment from Activity
             }
         })
     }
