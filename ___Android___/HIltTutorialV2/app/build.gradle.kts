@@ -2,7 +2,6 @@ plugins {
     alias(libs.plugins.androidApplication)
     alias(libs.plugins.jetbrainsKotlinAndroid)
     alias(libs.plugins.ksp)
-    //alias(libs.plugins.kapt)
     alias(libs.plugins.hilt)
 }
 
@@ -51,6 +50,5 @@ dependencies {
 
     implementation(libs.hilt.android)
     ksp(libs.hilt.compiler)
-    //implementation(libs.hilt.compiler)
 
 }

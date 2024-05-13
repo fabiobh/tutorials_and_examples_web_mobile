@@ -3,8 +3,8 @@ plugins {
     alias(libs.plugins.androidApplication) apply false
     alias(libs.plugins.jetbrainsKotlinAndroid) apply false
 
+    // add hilt to the project
     alias(libs.plugins.ksp) apply false
-    //alias(libs.plugins.kapt) apply false
     alias(libs.plugins.hilt) apply false
 
 }
