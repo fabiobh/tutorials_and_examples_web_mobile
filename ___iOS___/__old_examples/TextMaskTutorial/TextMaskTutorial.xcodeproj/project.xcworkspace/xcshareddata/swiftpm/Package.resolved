@@ -1,0 +1,23 @@
+{
+  "pins" : [
+    {
+      "identity" : "maskedformatter",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Columbina/MaskedFormatter.git",
+      "state" : {
+        "revision" : "69a74e913c78f7d14d36c00dc49d9ddd76711293",
+        "version" : "1.0.1"
+      }
+    },
+    {
+      "identity" : "maskeduitextfield",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Columbina/MaskedUITextField",
+      "state" : {
+        "branch" : "main",
+        "revision" : "7788a9fdc8d99a06ce94377e4d1364f8cfd61a28"
+      }
+    }
+  ],
+  "version" : 2
+}
